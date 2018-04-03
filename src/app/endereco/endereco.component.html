@@ -1,0 +1,37 @@
+<div class="container"> 
+  <h1>Pesquisa de Endreço</h1>
+<div class="for-group">
+<label>Digite o Cep</label>
+<input class="form-control" type="text" [(ngModel)]="cep" size="10">
+</div>
+<button class="btn btn-primary" (click)="getCep()">Pesquisa</button>
+
+</div>
+
+<div class="container" *ngIf="endereco">
+  <div class="form-group">
+    <label>Endereço</label>
+    <small class="form-text">{{endereco.logradouro}}</small>
+  </div>
+
+
+
+    <div class="form-group">
+      <label>Bairro</label>
+      <small class="form-text">{{endereco.bairro}}</small>
+    </div>
+  
+
+  
+      <div class="form-group">
+        <label>Cidade</label>
+        <small class="form-text">{{endereco.localidade}}</small>
+      </div>
+    
+
+    
+        <div class="form-group">
+          <label>Estado</label>
+          <small class="form-text">{{endereco.uf}}</small>
+        </div>
+      </div>
